@@ -238,7 +238,7 @@
                         <h3>Can you walk me through your design process?</h3>
                         <p>My design process includes competitor and target audience analysis, designing the logical structure, prototype development, moodboard creation and references, design development, animations, adaptive design, making revisions, and a project presentation with ongoing process monitoring. This structured approach ensures the best results for your project.</p>
                     </div>
-
+ 
                     <div class="faq-item">
                         <h3>Can you help with SEO?</h3>
                         <p>While I primarily focus on design and development, I can incorporate basic SEO best practices into your website design. For more advanced SEO services, I recommend working with an SEO specialist.</p>
@@ -258,8 +258,6 @@
             </div>  
         </div>
     </section>
-
-    <script src="script.js"></script>
 
 </body>
 
@@ -285,27 +283,32 @@
     </div>
 </footer>
 
-<div id="modal-web-design" class="modal">
+<dialog id="modal-web-design" class="modal">
     <div class="modal-content">
-        <span class="close">&times;</span>
-        <button class="price-button">STARTS AT $1000</button>
-        <h2>WEB DESIGN</h2>
-        <p>This service includes detailed design made in Figma with mobile versions. It's perfect if you want to take the design and hand it over to your programmer for development.</p>
-        <h3>KEY FEATURES</h3>
-        <ul>
-            <li>Custom Design with unique elements tailored to your brand.</li>
-            <li>Mobile Optimization: Designs include responsive, mobile versions for seamless viewing on all devices.</li>
-            <li>Fast turnover - 7 days</li>
-        </ul>
-        <div class="modal-buttons">
-            <a href="#" class="get-started">GET STARTED</a>
-            <a href="#" class="email">EMAIL</a>
+        <div class="modal-header">
+            <button class="price-button">STARTS AT $1000</button>
+            <span class="close">&times;</span>
         </div>
-        <img src="image/pop1.png" alt="Surfboard example" class="example-image">
+        <div class="modal-body">
+            <div class="modal-text">
+                <h2>WEB DESIGN</h2>
+                <p>This service includes detailed design made in Figma with mobile versions. It's perfect if you want to take the design and hand it over to your programmer for development.</p>
+                <h3>KEY FEATURES</h3>
+                <ul>
+                    <li>Custom Design with unique elements tailored to your brand.</li>
+                    <li>Mobile Optimization: Designs include responsive, mobile versions for seamless viewing on all devices.</li>
+                    <li>Fast turnover - 7 days</li>
+                </ul>
+                <div class="modal-footer">
+                    <a href="#" class="get-started">GET STARTED</a>
+                    <a href="#" class="email">EMAIL</a>
+                </div>
+            </div>
+            <img src="image/pop1.png" alt="Surfboard example" class="example-image">
+        </div>
     </div>
-</div>
+</dialog>
 
-  
   <div id="modal-web-design-framer" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -317,5 +320,7 @@
       </div>
     </div>
   </div>
+
+  <script src="script.js"></script>
 
 </html>
