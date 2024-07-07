@@ -1183,7 +1183,7 @@ dialog:-internal-dialog-in-top-layer {
 .modal-content {
   background-color: #2C2C34;
   margin: 5% auto;
-  padding: 20px;
+  padding: 50px;
   /* border: 1px solid #888; */
   max-width: 885px; 
   border-radius: 50px;
@@ -1214,7 +1214,7 @@ dialog:-internal-dialog-in-top-layer {
 .price-button {
   background-color: transparent;
   border: 1px solid #FF8BFA;
-  color: #FF8BFA;
+  color: #FFF;
   border-radius: 20px;
   padding: 10px 20px;
   font-size: 16px;
@@ -1226,9 +1226,13 @@ dialog:-internal-dialog-in-top-layer {
 }
 
 .close {
-  color: #FFF;
-  font-size: 28px;
-  font-weight: bold;
+  grid-row: -3;
+  grid-column: 3; 
+  background: url("../svg/button-plus.svg") no-repeat center center;
+  background-size: cover;
+  border: none;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 
@@ -1249,18 +1253,20 @@ h3 {
   margin-bottom: 10px;
 }
 
-ul {
-  list-style: none;
+ol {
+  /* list-style: none; */
   padding-left: 0;
   margin: 0;
   line-height: 1.3;
+  margin-left: 23px;
 }
+
 .modal p {
   padding-bottom: 30px;
   border-bottom: 1px solid #888;
 }
 
-ul li {
+ol li {
   margin-bottom: 10px;
 }
 
@@ -1277,7 +1283,7 @@ ul li {
   margin-top: 20px;
 }
 
-.get-started, .email {
+.get-started {
   padding: 10px 20px;
   background-color: #FF8BFA;
   color: #111;
@@ -1288,7 +1294,28 @@ ul li {
   display: inline-block;
 }
 
-.get-started:hover, .email:hover {
+ .email {
+
+  background-color: transparent;
+  border: 1px solid #FF8BFA;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+   
+
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+
+.get-started:hover {
+  background-color: #FF57BB;
+}
+
+.email:hover {
   background-color: #FF57BB;
 }
 
