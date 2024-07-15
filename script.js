@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const serviceItems = document.querySelectorAll('.service-item');
     const faqItems = document.querySelectorAll('.faq-item');
@@ -27,92 +25,44 @@ document.addEventListener('DOMContentLoaded', function () {
     workItems.forEach(item => {
         observer.observe(item);
     });
-});
     
-document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.getElementById("modal-web-design");
-    const openButtons = document.querySelectorAll(".open-modal[data-service='web-design']");
-    const closeButton = document.querySelector(".modal .close");
+    const modals = document.querySelectorAll('.modal');
+    const openButtons = document.querySelectorAll('.open-modal');
+    const closeButtons = document.querySelectorAll('.modal .close');
 
     openButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            modal.showModal();
+        button.addEventListener('click', (event) => {
+            const service = event.currentTarget.getAttribute('data-service');
+            const modal = document.querySelector(`#modal-${service}`);
+            if (modal) {
+                modal.style.display = 'block';
+                setTimeout(() => {
+                    modal.setAttribute('open', '');
+                }, 10);
+            }
         });
     });
 
-    closeButton.addEventListener('click', () => {
-        modal.close();
-    });
-
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.close();
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.getElementById("modal-web-design-framer");
-    const openButtons = document.querySelectorAll(".open-modal[data-service='web-design-framer']");
-    const closeButton = document.querySelector(".modal .close");
-
-    openButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            modal.showModal();
+    closeButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const modal = event.currentTarget.closest('.modal');
+            if (modal) {
+                modal.removeAttribute('open');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 200); 
+            }
         });
     });
 
-    closeButton.addEventListener('click', () => {
-        modal.close();
-    });
-
     window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.close();
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.getElementById("modal-web-design-programmer");
-    const openButtons = document.querySelectorAll(".open-modal[data-service='web-design-programmer']");
-    const closeButton = document.querySelector(".modal .close");
-
-    openButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            modal.showModal();
+        modals.forEach(modal => {
+            if (event.target === modal) {
+                modal.removeAttribute('open');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 200); // match the transition duration
+            }
         });
-    });
-
-    closeButton.addEventListener('click', () => {
-        modal.close();
-    });
-
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.close();
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.getElementById("modal-graphic-design");
-    const openButtons = document.querySelectorAll(".open-modal[data-service='graphic-design']");
-    const closeButton = document.querySelector(".modal .close");
-
-    openButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            modal.showModal();
-        });
-    });
-
-    closeButton.addEventListener('click', () => {
-        modal.close();
-    });
-
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.close();
-        }
     });
 });
