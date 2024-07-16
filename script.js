@@ -66,3 +66,40 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    const cursor = document.createElement('div');
+    cursor.id = 'custom-cursor';
+    document.body.appendChild(cursor);
+  
+
+    const contactSection = document.querySelector('#contact');
+  
+   
+    contactSection.addEventListener('mousemove', function(e) {
+      const rect = contactSection.getBoundingClientRect();
+      const x = Math.round((e.clientX - rect.left) / rect.width * 100);
+      const y = Math.round((e.clientY - rect.top) / rect.height * 100);
+  
+      
+      contactSection.style.background = `radial-gradient(at ${x}% ${y}%, #e3f673, #D5F12E)`;
+  
+    
+      cursor.style.transform = `translate(${e.clientX - cursor.offsetWidth / 2}px, ${e.clientY - cursor.offsetHeight / 2}px)`;
+    });
+  
+    // Optional: Add hover effect on clickable elements
+    // const hoverElements = contactSection.querySelectorAll('button, a');
+    // hoverElements.forEach(element => {
+    //   element.addEventListener('mouseenter', () => {
+    //     cursor.style.borderColor = '#AFF12E'; // Change color on hover
+    //   });
+    //   element.addEventListener('mouseleave', () => {
+    //     cursor.style.borderColor = '#D5F12E';
+    //   });
+    });
+
+    setTimeout(function(){
+        document.body.classList.add('body_visible');
+    }, 100);

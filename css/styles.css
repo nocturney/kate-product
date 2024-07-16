@@ -7,20 +7,30 @@
 }
 
 * {
- margin: 0 ;
+ margin: 0;
  padding: 0;
  box-sizing: border-box;
  font-family: 'Montserrat', sans-serif;
  scrollbar-width: none;
  overflow: none;
+ user-select: none;
 }
 
 body {
- 
+  /* background: radial-gradient(at 0% 0%, #6b5ef7, #17191F); */
  background: #17191F;
  color: #FFFFFF;
  width: 100vw;
  margin: 0 auto;
+ height: auto !important;
+}
+
+.body_hide {
+	opacity: 0;
+	transition: .3s opacity ease-in-out;
+}
+.body_visible {
+	opacity: 1;
 }
 
 header {
@@ -51,10 +61,6 @@ header {
 }
 
 .nav #menu {
-  display: none;
-}
-
-.nav label {
   border-radius: 3.14rem;
   align-items: center;
   background: url("../svg/menu.svg") no-repeat center center;
@@ -68,11 +74,11 @@ header {
   z-index: 1006;
 }
 
-.nav label:hover {
+.nav #menu:hover {
   box-shadow: 0 0 200px 5px #D5F12E;
 }
 
-.navbar {
+/* .navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -105,13 +111,11 @@ header {
   display: flex;
   top: auto;
   left: 50%;
-}
+} */
 
-
-#menu:checked ~ .logo {
+/* #menu:checked ~ .logo {
   position: fixed;
-  /* visibility: visible; */
-}
+} */
 
 /* #menu:checked ~ .contact-button {
   position: fixed;
@@ -149,13 +153,14 @@ header {
  border-radius: 20px;
  font-size: 16px;
  cursor: pointer;
- transition: all 0.3s ease;
+ transition: all 0.5s ease;
  /* z-index: 1006; */
 }
 
 .nav .contact-button:hover {
- background-color: #FF8BFA;
- color: #111;
+  background-color: #FF8BFA;
+  color: #111;
+  box-shadow: 0 0 300px 5px #FF8BFb;
 }
 
 
@@ -203,7 +208,7 @@ header {
  font-size: 16px;
  cursor: pointer;
  border-radius: 20px;
- transition: all 0.3s ease;
+ transition: all 0.5s ease;
 }
 
 .view-portfolio {
@@ -214,6 +219,7 @@ header {
 .intro button:hover {
  background-color: #FF8BFA;
  color: #111;
+ box-shadow: 0 0 300px 5px #FF8BFb;
 }
 
 #about {
@@ -604,6 +610,15 @@ blockquote span {
  width: 40px;
  height: 40px;
  cursor: pointer;
+ border-radius: 3.14rem;
+}
+
+#services .service-item1 button:hover,
+#services .service-item2 button:hover,
+#services .service-item3 button:hover,
+#services .service-item4 button:hover {
+  box-shadow: 0 0 300px 5px #FF8BFb;
+  transition: 0.5s;
 }
 
 /* #services .service-item .open-modal {
@@ -618,12 +633,11 @@ blockquote span {
  cursor: pointer;
 } */
 
-#work-process {
- /* padding: 50px 0; */
+/* #work-process {
  text-align: center;
  position: relative;
  background: url("../svg/vector.svg") no-repeat center center;
-}
+} */
 
 /* #work-process img {
  text-align: center;
@@ -636,6 +650,41 @@ blockquote span {
  max-width: 1420px;
  height: 600px;
  margin: 0 auto;
+}
+
+#work-process {
+  max-width: 1420px;
+  text-align: center;
+  position: relative;
+  background: url("/vector1.png") no-repeat center center;
+  background-size: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1420px) {
+  #work-process {
+      background: url("/vector1.png") no-repeat center center;
+      background-size: 100%;
+      margin: 0 auto;
+  }
+}
+
+@media (max-width: 810px) {
+  #work-process {
+      background: url("/vector2.png") no-repeat center center;
+      background-size: 100%;
+      height: 1620px;
+      margin: 0 auto;
+  }
+}
+
+@media (max-width: 390px) {
+  #work-process {
+      background: url("/vector3.png") no-repeat center center;
+      background-size: 100%;
+      height: 1420px;
+      margin: 0 auto;
+  }
 }
 
 #work-process h2 {
@@ -652,68 +701,68 @@ blockquote span {
 }
 
 #work-process h2::after {
- /* position: ; */
+
  width: 110px;
- /* padding:; */
+
  margin: 0 0 50px 500px;
  align-items: center;
- /* grid-area: a; */
+
  flex-grow: 1;
- height: 5px; /* Высота линии */
- background-color: #fff; /* Цвет линии */
+ height: 5px; 
+ background-color: #fff; 
  z-index: 10;
 }
 
-.process-list {
+/* .process-list {
  position: relative;
  display: inline-block;
  align-items: center;
  gap: 50px;
  margin-top: 50px;
-}
+} */
 
 /* Custom positioning for steps */
-#work-process .step1 {
- /* width: 450px; */
+/* #work-process .step1 {
+
  text-align: left;
  background-color: #FAFFD9;
  transform: translateX(-450px) translateY(-73px) rotate(-5.64deg);
 }
 
 #work-process .step2 {
- /* width: 450px; */
+ 
  text-align: left;
  background-color: #F2FFA6;
  transform: translateX(-350px) translateY(50px);
 }
 
 #work-process .step3 {
- /* width: 500px; */
+
  text-align: left;
  background-color: #ECFD88;
  transform: translateX(-100px) translateY(-250px) rotate(5.81deg);
 }
 
 #work-process .step4 {
- /* width: 550px; */
+
  text-align: left;
  background-color: #E8FC6F;
  transform: translateX(120px) translateY(-550px) rotate(4.71deg);
 }
 
 #work-process .step5 {
- /* width: 700px; */
+
  text-align: left;
  background-color: #E4FE49;
  transform: translateX(250px) translateY(-400px) rotate(-4.76deg);
 }
 
 #work-process .step6 {
- /* width: 700px; */
+
  text-align: left;
  background-color: #D5F12E;
  transform: translateX(530px) translateY(-770px) rotate(9.95deg);
-}
+} */
 
 /* Curved connectors */
 /* .connector {
@@ -736,12 +785,12 @@ blockquote span {
    fill: none;
 } */
 
-.process-step {
+/* .process-step {
  position: relative;
  width: 250px;
  padding: 20px;
  border-radius: 20px;
- /* transform: matrix(1, -0.1, 0.1, 1, 0, 0); */
+ 
  z-index: 1;
 }
 
@@ -761,7 +810,7 @@ blockquote span {
  font-weight: 400;
  line-height: 21px;
  letter-spacing: -0.05em;
-}
+} */
 
 #portfolio {
  max-width: 1340px;
@@ -915,7 +964,18 @@ blockquote span {
  text-align: left;
  color: #17191F;
  overflow: hidden;
+
 }
+
+/* #custom-cursor {
+  position: absolute;
+  width: 50px; 
+  height: 50px; 
+  border: 2px solid #17191F; 
+  border-radius: 50%; 
+  pointer-events: none; 
+  transition: transform 0.1s ease;
+} */
 
 #contact .container {
  position: relative;
@@ -928,8 +988,9 @@ blockquote span {
  position: absolute;
  font-size: 200px;
  font-weight: bold;
- color: rgba(255, 255, 255, 0.2);; 
+ color: rgba(255, 255, 255, 0.2); 
  white-space: nowrap;
+ cursor: default;
 }
 
 .background-text:nth-child(4) {
@@ -1330,11 +1391,11 @@ h3 {
 }
 
 ol {
- /* list-style: none; */
- padding-left: 0;
- margin: 0;
- line-height: 1.3;
- margin-left: 23px;
+	list-style-type: none; 
+	counter-reset: num;
+	margin: 0 0 0 35px;
+	padding: 15px 0 5px 0;
+	font-size: 18px;
 }
 
 .modal p {
@@ -1343,7 +1404,21 @@ ol {
 }
 
 ol li {
- margin-bottom: 10px;
+	position: relative;	
+	margin: 0 0 0 0;
+	padding: 0 0 10px 0;
+}
+
+ol li:before {
+	content: counter(num) '.'; 
+	counter-increment: num;
+	display: inline-block;	
+	position: absolute;
+	top: 0px;
+	left: -26px;
+	width: 20px;    
+	color: #ef6780;
+	text-align: right;
 }
 
 .example-image {
@@ -1453,7 +1528,7 @@ ol li {
  }
 
  /* Адаптация секции work process */
- #work-process .process-list {
+ /* #work-process .process-list {
      display: flex;
      flex-direction: column;
      gap: 20px;
@@ -1463,7 +1538,7 @@ ol li {
  #work-process .process-step {
      transform: none;
      width: auto;
- }
+ } */
 
  /* Адаптация секции portfolio */
  #portfolio .portfolio-grid {
@@ -1551,7 +1626,7 @@ ol li {
  }
 
  /* Адаптация секции work process */
- #work-process .process-list {
+ /* #work-process .process-list {
      display: flex;
      flex-direction: column;
      gap: 20px;
@@ -1561,7 +1636,7 @@ ol li {
  #work-process .process-step {
      transform: none;
      width: auto;
- }
+ } */
 
  /* Адаптация секции portfolio */
  #portfolio .portfolio-grid {
