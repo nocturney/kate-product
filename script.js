@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 modal.removeAttribute('open');
                 setTimeout(() => {
                     modal.style.display = 'none';
-                }, 200); // match the transition duration
+                }, 200); 
             }
         });
     });
@@ -103,3 +103,24 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function(){
         document.body.classList.add('body_visible');
     }, 100);
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.getElementById('menu');
+        const closeButton = document.getElementById('close-menu');
+        const menuModal = document.getElementById('menu-modal');
+        const menuItems = document.querySelectorAll('.menu-item');
+    
+        menuButton.addEventListener('click', function() {
+            menuModal.showModal();
+        });
+    
+        closeButton.addEventListener('click', function() {
+            menuModal.close();
+        });
+    
+        menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+                menuModal.close();
+            });
+        });
+    });
