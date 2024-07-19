@@ -89,15 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
       cursor.style.transform = `translate(${e.clientX - cursor.offsetWidth / 2}px, ${e.clientY - cursor.offsetHeight / 2}px)`;
     });
   
-    // Optional: Add hover effect on clickable elements
-    // const hoverElements = contactSection.querySelectorAll('button, a');
-    // hoverElements.forEach(element => {
-    //   element.addEventListener('mouseenter', () => {
-    //     cursor.style.borderColor = '#AFF12E'; // Change color on hover
-    //   });
-    //   element.addEventListener('mouseleave', () => {
-    //     cursor.style.borderColor = '#D5F12E';
-    //   });
     });
 
     setTimeout(function(){
@@ -109,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const closeButton = document.getElementById('close-menu');
         const menuModal = document.getElementById('menu-modal');
         const menuItems = document.querySelectorAll('.menu-item');
+        const logo = document.querySelector('.menu-logo');
     
         menuButton.addEventListener('click', function() {
             menuModal.showModal();
@@ -122,5 +114,9 @@ document.addEventListener('DOMContentLoaded', function() {
             item.addEventListener('click', function() {
                 menuModal.close();
             });
+        });
+
+        logo.addEventListener('click', function() {
+            menuModal.close();
         });
     });
