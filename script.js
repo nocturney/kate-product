@@ -120,3 +120,15 @@ document.addEventListener('DOMContentLoaded', function() {
             menuModal.close();
         });
     });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const goToTopButton = document.querySelector('.go-to-top');
+    
+        goToTopButton.addEventListener('click', function (event) {
+            event.preventDefault(); 
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' 
+            });
+        });
+    });
