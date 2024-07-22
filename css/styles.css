@@ -1,4 +1,4 @@
-/* Basic reset */
+
 & {
   --big-fz: calc(25px + (45 - 25) * (100vw + 300px) / (1500 - 300));
   --medium-fz: calc(20px + (35 - 20) * (100vw + 300px) / (1500 - 300));
@@ -12,7 +12,7 @@
  box-sizing: border-box;
  font-family: 'Montserrat', sans-serif;
  scrollbar-width: none;
- overflow: none;
+ overflow: none; 
  user-select: none;
 }
 
@@ -41,7 +41,6 @@
 }
 
 body {
-  /* background: radial-gradient(at 0% 0%, #6b5ef7, #17191F); */
  background: #17191F;
  color: #FFFFFF;
  width: 100vw;
@@ -140,14 +139,14 @@ header {
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
-  /* align-items: center; */
+
   padding: 20px 50px 0;
 }
 
 .menu-item {
   white-space: nowrap;
   font-size: 100px;
-  /* margin: 20px 0; */
+
   text-decoration: none;
   color: #FFFFFF;
   line-height: 121.9px;
@@ -168,16 +167,15 @@ header {
   align-items: center;
   width: 100%;
   max-width: 1300px;
-  /* margin: 0 auto; */
+
   justify-content: space-between; 
-  /* width: 100%; */
+
   background: #17191F;
-  /* padding: 40px 0; */
+
   text-align: center;
   color: #777777;
   position: relative;
-  /* height: 100px; */
-  /* margin: -100px 0 0 0 auto; */
+
 }
 
 .menu-footer .menu-social {
@@ -228,7 +226,7 @@ header {
  letter-spacing: 1px;
  color: #fff;
  text-decoration: none;
- /* z-index: 1006; */
+
 }
 
 .nav #menu {
@@ -248,72 +246,6 @@ header {
 .nav #menu:hover {
   box-shadow: 0 0 200px 1px #D5F12E;
 }
-
-/* .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #17191F;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1005;
-}
-
-.navbar ul li {
-  margin: 1rem 0rem;
-  text-align: center;
-}
-
-#menu:checked ~ .navbar {
-  opacity: 1;
-  visibility: visible;
-  transition: 0.3s;
-}
-
-#menu:checked ~ label {
-  transform: rotate(-45deg);
-  transition: 0.3s;
-  position: fixed;
-  display: flex;
-  top: auto;
-  left: 50%;
-} */
-
-/* #menu:checked ~ .logo {
-  position: fixed;
-} */
-
-/* #menu:checked ~ .contact-button {
-  position: fixed;
-  visibility: visible;
-} */
-
-/* #menu:checked ~ i {
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-} */
-
-/* .nav .menu .contact-button {
- padding: 10px 20px;
- background-color: transparent;
- border: 1px solid #FF8BFA;
- color: #FF8BFA;
- text-decoration: none;
- border-radius: 20px;
- transition: all 0.3s ease;
-}
-
-.nav .menu .contact-button:hover {
- background-color: #FF8BFA;
- color: #111;
-} */
 
 .nav  .contact-button {
  padding: 10px 20px;
@@ -368,7 +300,7 @@ header {
  line-height: 62px;
  letter-spacing: -0.05em;
  text-transform: uppercase;
- /* margin: 0 0 20px 0; */
+
 }
 
 .intro button {
@@ -376,7 +308,7 @@ header {
  padding: 10px 20px;
  background-color: transparent;
  border: 1px solid #FF8BFA;
- /* color: #FF8BFA; */
+
  font-size: 16px;
  cursor: pointer;
  border-radius: 20px;
@@ -458,21 +390,12 @@ blockquote span {
  display: inline-block;
 }
 
-/* .header-about .underline {
- width: 110px;
- margin: 25px 0 25px 255px;
- flex-grow: 1;
- height: 5px; 
- background-color: #000;
- align-content: flex-start;
-}
-*/
 .header-about h1 {
  margin-top: 20px;
  margin-bottom: 35px;
  font-size: 50px;
  font-weight: bold;
- /* display: inline-block; */
+
 }
 
 .skills {
@@ -482,7 +405,7 @@ blockquote span {
  gap: 10px;
  align-self: start;
  flex-direction: column;
- /* flex-wrap:  */
+
 }
 
 .skills p {
@@ -493,13 +416,13 @@ blockquote span {
 .skills .icons {
  display: flex;
  gap: 10px;
- /* margin-top: 10px; */
+
 }
 
 .skills img {
  width: 40px;
  height: 40px;
- /* margin: 0 10px; */
+
 }
 
 .journey {
@@ -534,7 +457,6 @@ blockquote span {
 
 #services {
  padding: 50px 0;
- /* text-align: center; */
 }
 
 #services .container {
@@ -554,8 +476,6 @@ blockquote span {
    "c d"
    "e f"
    "g h";
- /* flex-wrap: wrap; */
- /* justify-content: center; */
  gap: 50px;
  margin-top: 50px;
 }
@@ -600,36 +520,6 @@ blockquote span {
  transform: translateY(0);
 }
 
-
-/* #services h2::after {
- content: "";
- display: block;
- width: 100px; 
- height: 2px; 
- background-color: #fff;  */
- /* position: absolute; */
- /* bottom: -10px;  */
- /* left: 0;
- margin-top: 10px;  */
-
-
-
-/* #services p1 {
- color: #D5F12E;
- font-style: italic;
-} */
-
-/* .service-item1 {
- display: flex;
- align-items: flex-start;
- justify-content: space-between;
- align-items: center;
- grid-area: b;
- width: 607px;
- padding: 20px;
- border-bottom: 2px solid #fff;
-} */
-
 #services .service-item1, 
 #services .service-item2, 
 #services .service-item3, 
@@ -649,7 +539,6 @@ blockquote span {
  grid-area: b;
  width: 607px;
 
- /* border-bottom: 1px solid #fff; */
 }
 
 
@@ -658,8 +547,6 @@ blockquote span {
  align-items: center;
  grid-area: d;
  width: 607px;
-
- /* border-bottom: 1px solid #fff; */
 }
 
 .service-item3 {
@@ -668,7 +555,6 @@ blockquote span {
  grid-area: f;
  width: 607px;
 
- /* border-bottom: 1px solid #fff; */
 }
 
 .service-item4 {
@@ -676,42 +562,7 @@ blockquote span {
  align-items: center;
  grid-area: h;
  width: 607px;
-
- /* border-bottom: 1px solid #fff; */
 }
-
-
-/* .service-item h3 {
- font-size: 30px;
- font-weight: 700;
- text-transform: uppercase;
- letter-spacing: -0.05em;
-}
-*/
-/* .service-item1 p {
- margin-top: 16px;
- font-size: 18px;
- line-height: 25px;
-}
-
-.service-item2 p {
- margin-top: 16px;
- font-size: 18px;
- line-height: 25px;
-}
-
-.service-item3 p {
- margin-top: 16px;
- font-size: 18px;
- line-height: 25px;
-}
-
-.service-item4 p {
- margin-top: 16px;
- font-size: 18px;
- line-height: 25px;
-}
-*/
 
 #services .service-item1 p,
 #services .service-item2 p, 
@@ -769,31 +620,6 @@ blockquote span {
   box-shadow: 0 0 300px 5px #FF8BFb;
   transition: 0.5s;
 }
-
-/* #services .service-item .open-modal {
- position: absolute;
- right: 20px;
- top: 20px;
- background: url("button-plus.svg") no-repeat center center;
- background-size: cover;
- border: none;
- width: 40px;
- height: 40px;
- cursor: pointer;
-} */
-
-/* #work-process {
- text-align: center;
- position: relative;
- background: url("../svg/vector.svg") no-repeat center center;
-} */
-
-/* #work-process img {
- text-align: center;
- position: relative;
- width: 1420px;
- height: 400px;
-} */
 
 #work-process .container {
  max-width: 1420px;
@@ -861,105 +687,6 @@ blockquote span {
  background-color: #fff; 
  z-index: 10;
 }
-
-/* .process-list {
- position: relative;
- display: inline-block;
- align-items: center;
- gap: 50px;
- margin-top: 50px;
-} */
-
-/* Custom positioning for steps */
-/* #work-process .step1 {
-
- text-align: left;
- background-color: #FAFFD9;
- transform: translateX(-450px) translateY(-73px) rotate(-5.64deg);
-}
-
-#work-process .step2 {
- 
- text-align: left;
- background-color: #F2FFA6;
- transform: translateX(-350px) translateY(50px);
-}
-
-#work-process .step3 {
-
- text-align: left;
- background-color: #ECFD88;
- transform: translateX(-100px) translateY(-250px) rotate(5.81deg);
-}
-
-#work-process .step4 {
-
- text-align: left;
- background-color: #E8FC6F;
- transform: translateX(120px) translateY(-550px) rotate(4.71deg);
-}
-
-#work-process .step5 {
-
- text-align: left;
- background-color: #E4FE49;
- transform: translateX(250px) translateY(-400px) rotate(-4.76deg);
-}
-
-#work-process .step6 {
-
- text-align: left;
- background-color: #D5F12E;
- transform: translateX(530px) translateY(-770px) rotate(9.95deg);
-} */
-
-/* Curved connectors */
-/* .connector {
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   top: 0;
-   left: 0;
-   z-index: 0;
-}
-
-.connector svg {
-   width: 100%;
-   height: 100%;
-}
-
-.connector path {
-   stroke: #FF8BFA;
-   stroke-width: 2;
-   fill: none;
-} */
-
-/* .process-step {
- position: relative;
- width: 250px;
- padding: 20px;
- border-radius: 20px;
- 
- z-index: 1;
-}
-
-.process-step h3 {
- color:#000; 
- font-size: 17px;
- font-weight: 700;
- line-height: 21px;
- letter-spacing: -0.05em;
- text-align: left;
-}
-
-.process-step p {
- color: #000;
- font-size: 17px;
- margin-top: 7px;
- font-weight: 400;
- line-height: 21px;
- letter-spacing: -0.05em;
-} */
 
 #portfolio {
  max-width: 1340px;
@@ -1967,7 +1694,6 @@ ol li:before {
   top: 360px
 }
 
- /* Адаптация секции FAQ */
 .faq-content {
   display: flex;
   padding: 20px;
@@ -2061,11 +1787,11 @@ ol li:before {
   position: static;
   width: 24px;
   height: 24px;
-  /* Inside Auto Layout */
+
   flex: none;
   order: 1;
   flex-grow: 0;
-  /* margin: 0px 3px; */
+ 
   }
 
   .menu-footer .menu-social a {
@@ -2073,9 +1799,6 @@ ol li:before {
 
   }
 
- /* footer .container {
-  padding: 20px;
- } */
 
  .menu-footer .menu-social {
   color: rgb(197, 197, 197);
