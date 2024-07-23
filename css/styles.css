@@ -3,7 +3,8 @@
   --big-fz: calc(25px + (45 - 25) * (100vw + 300px) / (1500 - 300));
   --medium-fz: calc(20px + (35 - 20) * (100vw + 300px) / (1500 - 300));
   --small-fz: calc(12px + (18 - 12) * (100vw + 300px) / (1500 - 300));
-  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5)
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+  --giant-fz: calc(40px + (100 - 40) * ((100vw - 320px) / (1440 - 320)));
 }
 
 * {
@@ -289,7 +290,7 @@ header {
 
 .intro h1 {
  color: #D5F12E;
- font-size: 100px;
+ font-size: var(--giant-fz);
  line-height: 136px;
  letter-spacing: -0.05em;
  text-transform: uppercase;
@@ -458,7 +459,9 @@ blockquote span {
 }
 
 #services {
- padding: 50px 50px;
+  width: 92.5vw;
+  margin: 0 auto;
+  padding-bottom: 50px;
 }
 
 #services .container {
@@ -720,7 +723,7 @@ blockquote span {
   #work-process {
       background: url("/vector2.png") no-repeat center center;
       background-size: 100%;
-      height: 1620px;
+      height: 1600px;
       margin: 0 auto;
   }
 }
@@ -735,16 +738,16 @@ blockquote span {
 }
 
 #work-process h2 {
- text-align: left;
- margin-left: 50px;
- margin-top: -80px;
- margin-bottom: 133px;
- font-size: 50px;
- font-weight: 700;
- text-transform: uppercase;
- letter-spacing: -0.05em;
- position: relative;
- z-index: 1;
+  text-align: left;
+  margin-left: 50px;
+  margin-top: -80px;
+  margin-bottom: 133px;
+  font-size: var(--big-fz);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  position: relative;
+  z-index: 1;
 }
 
 #work-process h2::after {
@@ -762,7 +765,7 @@ blockquote span {
 
 #portfolio {
   display: block;
-  padding: 50px 0;
+  padding: 50px 0px;
   text-align: center;
   margin: 0 auto;
 }
@@ -882,13 +885,13 @@ blockquote span {
 #portfolio .portfolio-item7 { grid-area: h}
 
 #contact {
- position: relative;
  max-width: 1340px;
+ width: 92.5vw;
+ padding: 50px 50px;
  margin: 0 auto;
  height: 650px;
  background: #D5F12E;
  border-radius: 50px;
- padding: 50px 50px;
  text-align: left;
  color: #17191F;
  overflow: hidden;
@@ -911,7 +914,6 @@ blockquote span {
 }
 
 .background-text:nth-child(4) {
-
  bottom: 10%;
  left: 30%;
 }
@@ -971,12 +973,10 @@ blockquote span {
 }
 
 .star-icon {
- /* display: flex; */
  position: relative;
  margin-left: 100%;
- /* top: -40px; */
- /* right: 500px; */
- /* justify-content: end; */
+ display: flex;
+ direction: rtl;
  width: 90px;
  height: 80px;
 }
@@ -984,7 +984,7 @@ blockquote span {
 
 #faq {
  max-width: 1340px;
- padding: 50px 50px;
+ width: 92.5vw;
  text-align: center;
  margin: 0 auto;
 }
@@ -1367,13 +1367,12 @@ ol li:before {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 2rem;
     grid-template-areas: 
     "a b c"
     "d e f";
-    /* justify-content: center; */
     margin-top: 50px;
-    padding: 50px 50px;
+    width: 92.5vw;
   }
 
   .portfolio-grid img {
@@ -1391,10 +1390,10 @@ ol li:before {
   #portfolio .portfolio-item6 { grid-area: e }
   #portfolio .portfolio-item7 { grid-area: f }
 
-  #contact {
+  /* #contact {
     padding: 100px 100px;
     margin: 0 auto;
-  }
+  } */
 }
 
 @media (max-width: 810px) {
@@ -1426,7 +1425,7 @@ ol li:before {
 
  .intro h1 {
   margin-top: 40px;
-  font-size: 70px;
+  font-size: var(--big-fz);
   font-weight: 700;
   line-height: 85px;
   letter-spacing: -5%;
@@ -1559,29 +1558,19 @@ ol li:before {
  }
  
 #work-process .work-process-h h2 {
-
   align-items: center;
   margin: 0 auto;
-
-  width: 262px;
+  /* width: 262px; */
   height: 39px;
-;
   font-weight: 700;
-  font-size: 32px;
   line-height: 39px;
-
   letter-spacing: -0.05em;
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 #work-process .work-process-h h2 {
   margin-top: -10px;
 }
 
- /* Адаптация секции portfolio */
  #portfolio .portfolio-grid {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -1593,8 +1582,8 @@ ol li:before {
 }
 
 #portfolio .container {
-  height: 1100px;
-  padding: 50px;
+  height: auto;
+  width: 92.5vw;
   margin: 0 auto;
 }
 
@@ -1609,67 +1598,31 @@ ol li:before {
 }
 
 #portfolio {
+  height: auto;
   padding-top: 0px;
-  height: 1500px;
 }
 
-#portfolio img {
+.portfolio-grid img {
   width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 #portfolio .portfolio-grid {
-  column-gap: 0px;
-  row-gap: 30px;
+  gap: 2rem;
+  padding: 0;
+  position: relative;
 }
 
-#portfolio .portfolio-item4 {
-  display: none;
-}
+#portfolio .portfolio-item4 { display: none}
 
-#portfolio .portfolio-item1 {
-  grid-area: a;
-  height: 320px;
-  width: 320px;
-  margin: 0 auto;
-
-}
-
-#portfolio .portfolio-item2 {
-  grid-area: b;
-  height: 320px;
-  width: 320px;
-  margin: 0 auto;
-
-}
-
-#portfolio .portfolio-item3 {
-  grid-area: c;
-  height: 320px;
-  width: 320px;
-  margin: 0 auto;
-}
-
-#portfolio .portfolio-item5 {
-  grid-area: d;
-  height: 320px;
-  width: 320px;
-  margin: 0 auto;
-}
-
-#portfolio .portfolio-item6 {
-  grid-area: e;
-  height: 320px;
-  width: 320px;
-  margin: 0 auto;
-}
-
-#portfolio .portfolio-item7 {
-  grid-area: f;
-  height: 320px;
-  width: 320px;
-  margin: 0 auto;
-}
+#portfolio .portfolio-item1 {grid-area: a}
+#portfolio .portfolio-item2 { grid-area: b}
+#portfolio .portfolio-item3 { grid-area: c}
+#portfolio .portfolio-item5 { grid-area: d}
+#portfolio .portfolio-item6 { grid-area: e}
+#portfolio .portfolio-item7 { grid-area: f}
 
 #portfolio .underline {
   display: none;
@@ -1678,11 +1631,10 @@ ol li:before {
   margin-bottom: -25px;
 }
 
-
 #contact {
   height: 650px;
-  padding: 50px 20px;
-  width: 100dvw;
+  padding: 50px 50px;
+  width: 92.5dvw;
 }
 
 #contact .container {
@@ -1720,7 +1672,7 @@ ol li:before {
 
 .faq-content {
   display: flex;
-  padding: 20px;
+  /* padding: 20px; */
   flex-direction: column;
 }
 
@@ -1820,7 +1772,6 @@ ol li:before {
 
   .menu-footer .menu-social a {
     margin-right: 20px;
-
   }
 
 
@@ -1986,11 +1937,9 @@ ol li:before {
 } */
 
 .intro h1 {
-
-  font-size: 40px;
   line-height: 1.2;
 
-  font-size: 40px;
+  font-size: var(--medium-fz);
   font-weight: 700;
   line-height: 49px;
   letter-spacing: -5%;
@@ -1998,11 +1947,9 @@ ol li:before {
 }
 
 .intro p {
-
-  width: 264px;
   height: 58px;
 
-  font-size: 24px;
+  font-size: var(--small-fz);
   font-weight: 500;
   line-height: 29px;
   letter-spacing: -5%;
@@ -2196,22 +2143,15 @@ ol li:before {
   margin-top: 30px;
   margin-right: 85px;
 
-  /* margin: 0 auto; */
-
   width: 262px;
   height: 39px;
 
   font-style: normal;
   font-weight: 700;
-  font-size: 32px;
+
   line-height: 39px;
 
   letter-spacing: -0.05em;
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-
  }
 
  /* #work-process .process-step {
@@ -2222,12 +2162,12 @@ ol li:before {
  /* Адаптация секции portfolio */
 
  #portfolio {
-  height: 2200px;
+  height: auto;
   padding: 0px;
+  padding-bottom: 50px;
  }
 
  #portfolio .container {
-  height: 2200px;
   padding: 0px;
   margin: 0 auto;
 }
@@ -2259,13 +2199,13 @@ ol li:before {
  #portfolio .portfolio-grid {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 2rem;
   margin-top: 0px;
   justify-content: center;
  }
 
  #portfolio img {
-  width: 320px;
+  width: 100%;
   height: auto;
  }
 
@@ -2357,10 +2297,6 @@ flex-grow: 0;
   letter-spacing: -5%;
   text-align: left;
   text-transform: uppercase;
-}
-
-#faq {
-  padding: 20px;
 }
 
  .faq-list {
