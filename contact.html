@@ -8,65 +8,75 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 </head>
 <body>
+
     <div class="wrapper">
-    <header>
-        <div class="nav">
-            <a href="index.html" class="logo">KATE SOTNIKOVA</a>
-            
-            <button class="menu-icon"><a href="/menu" class="menu"></a></button>
-            
-            <div class="menu">
-                <div href="#" class="contact-button">CONTACT</div>
-            </div>
-        
-        </div>
-    </header>
 
-        <section id="contact-page">
+        <header>
+            
+            <div class="nav">
+                <a href="index.html" class="logo">KATE SOTNIKOVA</a>
+                
+                <button class="menu-icon"><a href="/menu" class="menu"></a></button>
+                
+                <div class="menu">
+                    <div href="#" class="contact-button">CONTACT</div>
+                </div>
+            
+            </div>
+        </header>
+
+            <section id="contact-page">
+                <div class="container">
+                    <div class="contact-content">
+                        <h1>LET'S TALK!</h1>
+                        <p>I’m looking forward to hearing from you and working on your great ideas together!</p>
+                        <h2>GETTING TO KNOW YOU</h2>
+                        <form action="#" method="post" class="contact-form">
+                            <!-- <div class="form-group"> -->
+                                <input type="text" name="name" placeholder="Name" required>
+                                <input type="email" name="email" placeholder="Email" required>
+                            <!-- </div> -->
+                            <textarea name="message" placeholder="Tell me about your business and what design you're looking for (write as many details as you want)" required></textarea>
+                            <button type="submit">SUBMIT</button>
+                        </form>
+                    </div>
+                    <div class="contact-image">
+                        <picture>
+                            <source srcset="/image/media390px.png" media="(max-width: 1400px)">
+                            <img src="/image/kate.png" alt="kate">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <footer>
             <div class="container">
-                <div class="contact-content">
-                    <h1>LET'S TALK!</h1>
-                    <p>I’m looking forward to hearing from you and working on your great ideas together!</p>
-                    <h2>GETTING TO KNOW YOU</h2>
-                    <form action="#" method="post" class="contact-form">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Name" required>
-                            <input type="email" name="email" placeholder="Email" required>
-                        </div>
-                        <textarea name="message" placeholder="Tell me about your business and what design you're looking for (write as many details as you want)" required></textarea>
-                        <button type="submit">SUBMIT</button>
-                    </form>
-                </div>
-                <div class="contact-image">
-                    <img src="image/kate.png" alt="Kate Sotnikova">
-                </div>
-            </div>
-        </section>
-    </div>
-
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>©2024 Kate Sotnikova</p>
-                
-                <div class="social">
-                    <a href="#">Instagram
-                        <img scr="image/link.png">
-                    </a>
+                <div class="footer-content">
+                    <p>©2024 Kate Sotnikova</p>
                     
-                    <a href="#">Behances
-                        <img scr="image/link.png">
-                    </a>
-                </div>
-                
-                <a href="#" class="go-to-top">Go to top 
-                    <img scr="..svg/top.svg">
-                </a>
-            </div>
-        </div>
-    </footer>
+                    <div class="low-footer">
+                        <div class="social">
+                            <a href="#">Instagram
+                                <img src="image/link.png" alt="link">
+                            </a>
+                            
+                            <a href="#">Behances
+                                <img src="image/link.png" alt="link">
+                            </a>
+                        </div>
+                        
+                        <a href="#" class="go-to-top">Go to top 
+                            <img src="image/top.png" alt="top">
+                        </a>
+                    </div>
 
+                </div>
+            </div>
+        </footer>
+
+    </div>
 </body>
 
 </html>
