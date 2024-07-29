@@ -519,24 +519,24 @@ blockquote span {
 }
 
 .background-text1 {
- font-size: 240px;
+ font-size: clamp(11.25rem, 6.429rem + 9.52vw, 15rem);
  font-weight: 600;
  color: rgba(255, 255, 255, 0.1);
  position: absolute;
- top: 300px;
- left: 50%;
- right: 360px;
+ bottom: 20%;
+ left: 45%;
+ /* right: 360px; */
  transform: translateX(-50%);
  z-index: 1;
  white-space: nowrap;
 }
 
 .background-text2 {
- font-size: 240px;
+ font-size: clamp(11.25rem, 6.429rem + 9.52vw, 15rem);
  font-weight: 600;
  color: rgba(255, 255, 255, 0.1);
  position: absolute;
- top: 455px;
+ top: 60%;
  left: 50%;
  transform: translateX(-50%);
  z-index: 1;
@@ -1673,13 +1673,11 @@ ol li:before {
 }
 
 .background-text1 {
-  font-size: 120px;
-  top: 300px;
+display: none;
 }
 
 .background-text2 {
-  top: 400px;
-  font-size: 120px;
+  display: none;
 }
 
 
