@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Kate Sotnikova</title>
     <link rel="stylesheet" href="css/style-contact.css">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,7 +16,7 @@
             <div class="nav">
                 <a href="index.html" class="logo">KATE SOTNIKOVA</a>
                 
-                <button class="menu-icon"><a href="/menu" class="menu"></a></button>
+                <a href="#" id="menu"></a>
                 
                 <div class="menu">
                     <div href="#" class="contact-button">CONTACT</div>
@@ -24,6 +24,31 @@
             
             </div>
         </header>
+
+        <dialog id="menu-modal">
+            <div class="menu-header">
+                <a href="index.html" class="menu-logo">KATE SOTNIKOVA</a>
+                <button id="close-menu"></button>
+                <a href="contact.html" class="contact-button">CONTACT</a>
+            </div>
+            <nav class="modal-nav">
+                <a href="index.html#services" class="menu-item"><span>SERVICES</span></a>
+                <a href="index.html#work-process" class="menu-item">WORK PROCESS</a>
+                <a href="index.html#portfolio" class="menu-item">PORTFOLIO</a>
+                <a href="index.html#contact" class="menu-item">CONTACT</a>
+            </nav>
+            <div class="menu-footer">
+                <p>©2024 Kate Sotnikova</p>
+                <div class="menu-social">
+                    <a href="#">Instagram
+                        <img src="image/link.png" alt="link">
+                    </a>
+                    <a href="#">Behances
+                        <img src="image/link.png" alt="link">
+                    </a>
+                </div>
+            </div>
+        </dialog>
 
             <section id="contact-page">
                 <div class="container">
@@ -42,7 +67,7 @@
                     </div>
                     <div class="contact-image">
                         <picture>
-                            <source srcset="/image/media390px.png" media="(max-width: 1400px)">
+                            <source srcset="/image/media390px.png" media="(max-width: 670px)">
                             <img src="/image/kate.png" alt="kate">
                         </picture>
                     </div>
@@ -78,5 +103,7 @@
 
     </div>
 </body>
+
+<script src="app.js"></script>
 
 </html>

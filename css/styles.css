@@ -932,10 +932,10 @@ blockquote span {
  margin: -60px 0px 0px 180px;
  align-items: center;
 
- flex-grow: 1;
- height: 5px; 
+ /* flex-grow: 1; */
+ height: 10px; 
  background-color: #45474c; 
- z-index: 10;
+ /* z-index: 10; */
 }
 
 #portfolio .year-line2 {
@@ -944,7 +944,7 @@ blockquote span {
  align-items: center;
 
  flex-grow: 1;
- height: 5px; 
+ height: 10px; 
  background-color: #45474c;
  z-index: 10;
 }
@@ -994,12 +994,36 @@ blockquote span {
 
 #contact .background-text {
  position: absolute;
- font-size: 200px;
+ font-size: clamp(6.25rem, 3rem + 13.33vw, 15rem);
  font-weight: bold;
  color: rgba(255, 255, 255, 0.2); 
  white-space: nowrap;
- cursor: default;
+ user-select: none;
 }
+
+/* @media (max-width: 1200px) {
+  #contact .background-text {
+      font-size: clamp(20px, 12vw, 100px); 
+  }
+}
+
+@media (max-width: 992px) {
+  #contact .background-text {
+      font-size: clamp(20px, 14vw, 200px); 
+  }
+}
+
+@media (max-width: 768px) {
+  #contact .background-text {
+      font-size: clamp(20px, 16vw, 100px); 
+  }
+}
+
+@media (max-width: 576px) {
+  #contact .background-text {
+      font-size: clamp(20px, 18vw, 100px); 
+  }
+} */
 
 .background-text:nth-child(4) {
  bottom: 10%;
@@ -1007,14 +1031,13 @@ blockquote span {
 }
 
 .background-text:nth-child(2) {
- top: -4vw;
- left: -18vh;
-
+ bottom: 65%;
+ right: 55%;
 }
 
 .background-text:nth-child(3) {
- left: -18vh;
- bottom: -0%;
+  top: 60%;
+  right: 80%;
 }
 
 
@@ -1067,14 +1090,18 @@ blockquote span {
  }
 
 .star-icon {
- position: relative;
- margin-left: 100%;
+ /* position: relative; */
+ margin-left: 90%;
  display: flex;
- direction: rtl;
+ /* direction: rtl;
+  flex-direction: row-reverse; */
  width: 90px;
  height: 80px;
 }
 
+/* #contact .container img {
+  direction: rtl;
+} */
 
 #faq {
  max-width: 1340px;
@@ -1320,7 +1347,7 @@ dialog {
  display: grid;
  grid-template-columns: 1fr 1fr;
  grid-template-areas: "a b";
- gap: 70px;
+ gap: 60px;
  align-items: flex-start;
 }
 
@@ -1355,33 +1382,38 @@ dialog {
 }
 
 h2 {
- font-size: 24px;
+ font-size: clamp(1.25rem, 1.018rem + 0.95vw, 1.5rem);
  margin-bottom: 10px;
 }
 
 h3 {
  margin-top: 30px;
- font-size: 20px;
+ font-size: clamp(1.25rem, 1.018rem + 0.95vw, 1.5rem);
  margin-bottom: 10px;
 }
 
 ol {
 	list-style-type: none; 
 	counter-reset: num;
-	margin: 0 0 0 35px;
+	margin: 0 0 0 20px;
 	padding: 15px 0 5px 0;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .modal p {
  padding-bottom: 30px;
  border-bottom: 1px solid #888;
+
+ font-size: 16px;
+ color: rgb(197, 197, 197);
 }
 
 ol li {
 	position: relative;	
 	margin: 0 0 0 0;
 	padding: 0 0 10px 0;
+  font-size: 16px;
+  color: rgb(197, 197, 197);
 }
 
 ol li:before {
@@ -1400,6 +1432,7 @@ ol li:before {
  width: 100%;
  max-width: 365px;
  border-radius: 10px;
+ height: 90%;
 
  /* grid-area: b; */
 
@@ -1424,45 +1457,54 @@ ol li:before {
  }
 
 .modal-footer {
+  justify-content: space-between;
  display: flex;
  gap: 10px;
- margin-top: 20px;
+ /* margin-top: 20px; */
 }
 
 .get-started {
+  width: 50%;
  padding: 10px 20px;
  background-color: #FF8BFA;
  color: #111;
  text-decoration: none;
- border-radius: 20px;
+ border-radius: 110px;
  font-weight: bold;
  transition: background-color 0.3s ease;
  display: inline-block;
+ white-space: nowrap;
+ font-size: 16px;
+ justify-content: center;
+ align-items: center;
+ display: flex;
 }
 
 .email {
 
+  width: 50%;
  background-color: transparent;
  border: 1px solid #FF8BFA;
- border-radius: 20px;
+ border-radius: 110px;
  padding: 10px 20px;
  font-size: 16px;
-  
+  justify-content: center;
+  align-items: center;
 
  color: #FFF;
  text-decoration: none;
  font-weight: bold;
  transition: background-color 0.3s ease;
- display: inline-block;
+ display: flex;
 }
 
 
 .get-started:hover {
- background-color: #FF57BB;
+  background-color: #d5f12e; 
 }
 
 .email:hover {
- background-color: #FF57BB;
+  border: 1px solid #d5f12e;
 }
 
 /* .hidden {
@@ -1768,6 +1810,10 @@ ol li:before {
   width: 92.5dvw;
 }
 
+.star-icon {
+  display: none;
+}
+
 /* #contact .container {
   padding: 0 80px 0 80px;
 } */
@@ -1781,24 +1827,22 @@ ol li:before {
 }
 
 .background-text {
-  font-size: 100px;
+  font-weight: 600;
 }
 
 .background-text:nth-child(2) {
-  left: 10px;
-  top: -90px
+  left: 0%;
+  bottom: 95%;
 }
 
 .background-text:nth-child(3) {
-  left: 330px;
-  top: 240px;
-  font-weight: 600;
-  line-height: 219px;
+  left: 30%;
+  top: 20%;
 }
 
 .background-text:nth-child(4) {
-  left: 50px;
-  top: 360px
+  left: 10%;
+  top: 40%;
 }
 
 .faq-content {
@@ -1833,6 +1877,19 @@ ol li:before {
   direction: rtl;
  } */
 
+}
+
+@media (max-width: 800px) {
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+  }
+
+  .example-image {
+    margin: 0 auto;
+    margin-top: -30px;
+  }
 }
 
 @media (max-width: 710px) {
@@ -2129,12 +2186,12 @@ footer .go-to-top img {
   padding-top: 10px;
 }
 
-.get-started {
+/* .get-started {
   box-sizing: border-box;
-  /* pink */
+ 
   border: 1px solid rgb(255, 139, 250);
   border-radius: 110px;
-  /* pink */
+
   background: rgb(255, 139, 250);
 
   color: #FFF;
@@ -2152,11 +2209,11 @@ footer .go-to-top img {
   flex: none;
   order: 0;
   flex-grow: 1;
-}
+} */
 
-.email {
+/* .email {
   box-sizing: border-box;
-  /* pink */
+
   border: 1px solid rgb(255, 139, 250);
   border-radius: 110px;
 
@@ -2173,7 +2230,7 @@ footer .go-to-top img {
   flex: none;
   order: 1;
   flex-grow: 1;
-}
+} */
 
 .modal-text h3 {
   margin-top: 20px;
@@ -2509,9 +2566,8 @@ blockquote {
  }
 
  
- /* Адаптация секции contact */
+
  #contact {
-  /* margin-top: 180px; */
   height: 468px;
   padding: 20px;
   max-width: 350px;
@@ -2531,9 +2587,6 @@ blockquote {
  }
 
  #contact .contact-content h2 {
-
-  /* font-family: 'Montserrat';
-  font-style: normal; */
   font-weight: 700;
   font-size: 40px;
   line-height: 49px;
@@ -2548,11 +2601,11 @@ blockquote {
  }
 
  #contact .background-text {
-  font-size: 100px;
+  font-weight: 600;
  }
 
  .background-text:nth-child(4) {
-  bottom: 5%;
+  top: 60%;
   left: 0%;
  }
  
@@ -2563,7 +2616,7 @@ blockquote {
  
  .background-text:nth-child(3) {
   left: 60%;
-  bottom: 25%;
+  top: 40%;
  }
 
  /* Адаптация секции FAQ */
